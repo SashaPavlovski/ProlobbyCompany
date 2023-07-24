@@ -16,7 +16,7 @@ ProlobbyCompany is a web application that provides a platform for companies to m
 ## Technologies Used
 
 - Frontend: React.js, Redux, Bootstrap
-- Backend: Node.js, Express.js, MongoDB
+- Backend: Node.js, Express.js, Sql
 - Authentication: JSON Web Tokens (JWT)
 - Hosting: Heroku
 
