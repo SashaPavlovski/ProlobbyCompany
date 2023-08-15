@@ -6,6 +6,7 @@ export const GetRolesAsync = async (userID) => {
     let result = await axios.get(
       `http://localhost:7251/api/roles/roles/${userID}`
     );
+
     if (result.status === 200) {
       return result.data;
     } else {
@@ -13,6 +14,6 @@ export const GetRolesAsync = async (userID) => {
       return {};
     }
   } catch (error) {
-    alert("We encountered a problem, please contact the system administrator");
+    // alert("We encountered a problem, please contact the system administrator");
   }
 };

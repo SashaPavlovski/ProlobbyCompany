@@ -156,8 +156,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\cs\Utilities\Utilities\Utilities.csproj">
-      <Project>{A034B5CF-625B-499B-AFD9-25DCD6E24A90}</Project>
+    <ProjectReference Include="..\..\..\..\CSLessons\Utilities\Utilities\Utilities.csproj">
+      <Project>{a034b5cf-625b-499b-afd9-25dcd6e24a90}</Project>
       <Name>Utilities</Name>
     </ProjectReference>
     <ProjectReference Include="..\ProLobbyCompanyProject.Dal\ProLobbyCompanyProject.Dal.csproj">

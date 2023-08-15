@@ -25,28 +25,37 @@ export const Main = () => {
     handleRoles1();
     console.log("enter");
   }, []);
-
-  return (
-    <>
-      <UserContext.Provider value={{ role1, userId }}>
-        {role1.length > 0 ? (
-          role1.map((r) => {
-            if (r.name === "NonProfitOrganization") {
-              return RoutesNonProfitOrganization();
-            } else if (r.name === "BusinessCompanyRepresentative") {
-              return RoutesBusinessCompanyRepresentative();
-            } else if (r.name === "ProLobbyOwner") return RoutesProLobbyOwner();
-            else if (r.name === "SocialActivists")
-              return RoutesSocialActivists();
-            else return <></>;
-          })
-        ) : (
-          <>
-            <h1>Please wait until Data validation</h1>
-            <LogoutButton />
-          </>
-        )}
-      </UserContext.Provider>
-    </>
-  );
+  if (role1) {
+    return (
+      <>
+        <UserContext.Provider value={{ role1, userId }}>
+          {role1.length > 0 ? (
+            role1.map((r) => {
+              if (r.name === "NonProfitOrganization") {
+                return RoutesNonProfitOrganization();
+              } else if (r.name === "BusinessCompanyRepresentative") {
+                return RoutesBusinessCompanyRepresentative();
+              } else if (r.name === "ProLobbyOwner")
+                return RoutesProLobbyOwner();
+              else if (r.name === "SocialActivists")
+                return RoutesSocialActivists();
+              else return <></>;
+            })
+          ) : (
+            <>
+              <h1>Please wait until Data validation</h1>
+              <LogoutButton />
+            </>
+          )}
+        </UserContext.Provider>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <h1>Please wait until Data validation</h1>
+        <LogoutButton />
+      </>
+    );
+  }
 };
